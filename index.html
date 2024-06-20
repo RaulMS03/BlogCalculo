@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História e Fórmulas de Programação Linear</title>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#metodo-algebrico">Método Algébrico</a></li>
+                <li><a href="#metodo-basico">Método Básico</a></li>
+                <li><a href="#simplex">Algoritmo Simplex Tabular</a></li>
+                <li><a href="#matrizes">Matrizes</a></li>
+                <li><a href="#inversao-matrizes">Inversão de Matrizes</a></li>
+                <li><a href="#gauss-jordan">Gauss-Jordan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section id="home">
+            <h2>Blog Programação Linear</h2>
+
+            <h3>Bem-vindo à nossa Página!</h3>
+            <p "> Este projeto foi desenvolvido por dois alunos do curso de Análise e Desenvolvimento de
+                Sistemas (ADS), como
+                parte da disciplina de Programação Linear. Somos Ana Cristina Ferreira da Silva e Raul Mascarenhas
+                Souza, e
+                estamos entusiasmados em apresentar o resultado do nosso trabalho.
+            </p>
+
+            <h3>Objetivo do Projeto</h3>
+            <p> O objetivo principal deste projeto é aplicar os conceitos e técnicas de programação linear aprendidos
+                durante o curso. A programação linear é uma ferramenta matemática utilizada para otimizar processos e
+                tomar
+                decisões de maneira eficiente. Nosso intuito é demonstrar, através deste projeto, como esses conceitos
+                podem
+                ser aplicados em situações reais para resolver problemas práticos.
+            </p>
+           
+            <h3> O que você encontrará aqui</h3>
+            <p>            Introdução à Programação Linear: Explicações sobre o que é programação linear, seus principais conceitos e
+                aplicações.
+                Exemplos Práticos: Casos de uso onde a programação linear é aplicada para resolver problemas cotidianos.</p>
+        </section>
+
+        <section id="historia">
+            <h2>História da Programação Linear</h2>
+
+            <h3>A Programação Linear: Origens e Desenvolvimento</h3>
+            <p>A Programação Linear é um ramo da matemática aplicada que se dedica a maximizar ou minimizar uma função
+                linear, sujeita a restrições lineares. Sua trajetória é fascinante e repleta de avanços tanto teóricos
+                quanto práticos que revolucionaram a abordagem dos problemas de otimização em diversas áreas, como
+                economia, engenharia, logística e computação.
+            </p>
+
+            <h3>Início e Evolução</h3>
+            <p>Os primeiros passos da Programação Linear foram dados na primeira metade do século XX, em um contexto de 
+               intensa busca por eficiência e otimização, especialmente durante e após a Segunda Guerra Mundial. Em 1939,
+               o matemático russo Leonid Kantorovich foi o pioneiro na formulação de um problema de otimização linear ao 
+               enfrentar desafios relacionados à produção e transporte de recursos na União Soviética. Apesar da importância 
+               de seu trabalho, sua fama permaneceu restrita ao território soviético por muitos anos. Já em 1947, George Dantzig, 
+               matemático dos Estados Unidos, é reconhecido como o "fundador da programação linear". Ele criou o método Simplex, 
+               um algoritmo eficaz para resolver problemas desse tipo. Tal descoberta transformou a abordagem de problemas de 
+               otimização em larga escala, tornando viável uma resolução prática e eficiente.
+            </p>
+
+            <h3>Desenvolvimento e Estabelecimento</h3>
+            <p>Com a introdução do método Simplex de Dantzig, a programação linear ganhou destaque e passou a ser utilizada em 
+               diversas áreas. Durante os anos seguintes, diversas contribuições significativas foram feitas para o progresso da 
+               teoria e das aplicações da programação linear.
+            </p>
+            <p> Décadas de 1950-1960: A década de 1950 marcou a chegada de novas técnicas e a ampliação das aplicações da programação 
+                linear. Além do método Simplex, diversos algoritmos e métodos complementares foram desenvolvidos, expandindo o alcance 
+                e a eficiência da programação linear.
+            </p>
+            <p>Década de 1970: A teoria da dualidade, que estabelece uma relação entre cada problema de programação linear e um problema 
+               dual correspondente, fornecendo insights valiosos sobre a estrutura e as soluções dos problemas, foi formalmente elaborada 
+               e explorada.
+            </p>
+        </section>
+
+        <section id="metodo-algebrico">
+            <h2>Método Algébrico</h2>
+            <p>O método algébrico é uma abordagem fundamental na resolução de problemas matemáticos e na solução de equações. 
+                Este método envolve a manipulação simbólica de expressões e equações para encontrar valores desconhecidos. 
+            </p>
+
+            <p>
+                Ele é amplamente utilizado em diversos ramos da matemática e ciências, devido à sua precisão e capacidade de generalização.
+                No cerne do método algébrico está o uso de variáveis para representar quantidades desconhecidas. As variáveis são manipuladas 
+                usando uma série de operações matemáticas padrão, como adição, subtração, multiplicação e divisão, assim como operações mais complexas, 
+                dependendo do problema em questão. A ideia central é reescrever as equações em formas equivalentes que facilitem a identificação 
+                dos valores das variáveis.
+            </p>
+                
+            <p>
+                A resolução algébrica de equações envolve diversas técnicas, incluindo a simplificação de expressões, a fatoração e a aplicação de 
+                propriedades fundamentais das operações aritméticas. Um passo crucial é a isolação da variável de interesse, o que frequentemente 
+                requer a realização de operações inversas para desfazer as operações aplicadas à variável. Além disso, o método algébrico pode ser 
+                estendido para sistemas de equações, onde várias equações são resolvidas simultaneamente. Nesses casos, métodos como substituição e 
+                eliminação são usados para reduzir o sistema a uma forma mais simples que pode ser resolvida de maneira sistemática.
+            </p>
+               
+            <p>
+                Outro aspecto importante do método algébrico é o uso de identidades e propriedades algébricas, como a distributiva, comutativa e associativa, 
+                para transformar e simplificar expressões. Essas propriedades são ferramentas poderosas que permitem a manipulação e a resolução de equações 
+                de maneira eficiente. O método algébrico também se destaca na capacidade de generalizar soluções. Ao resolver equações de forma simbólica, é 
+                possível encontrar soluções gerais que se aplicam a uma ampla variedade de casos específicos. Isso é particularmente útil em matemática pura e 
+                aplicada, onde soluções generalizadas fornecem insights profundos sobre a estrutura dos problemas.
+            </p>
+                
+            <p>
+                Em resumo, o método algébrico é uma ferramenta essencial na matemática, caracterizada pela manipulação simbólica de variáveis e equações para 
+                encontrar soluções precisas e generalizadas. Ele envolve uma série de técnicas e propriedades que permitem a resolução sistemática e eficiente de 
+                problemas matemáticos complexos.
+            </p>
+
+            <h3>Exemplo:</h3>
+            <img src="../img/algebrico.png" alt="">
+
+            <h3>Conclusão</h3>
+            <p>O método algébrico permite resolver problemas de programação linear através da solução de sistemas de
+                equações lineares. Embora possa ser trabalhoso para problemas maiores, ele fornece uma base sólida para
+                compreender e aplicar técnicas de otimização em diferentes contextos.
+            </p>
+        </section>
+
+        <section id="metodo-basico">
+            <h2>Método Básico (Simplex)</h2>
+            <p> O método básico de resolução de equações é uma abordagem sistemática e direta para encontrar o valor de variáveis desconhecidas em equações simples. 
+                Este método é frequentemente utilizado como introdução ao estudo da álgebra, por sua simplicidade e clareza na aplicação de operações aritméticas fundamentais.
+                No centro do método básico está a manipulação direta das equações usando operações matemáticas elementares: adição, subtração, multiplicação e divisão. O objetivo 
+                principal é isolar a variável desconhecida em um dos lados da equação para determinar seu valor. Esse processo envolve a aplicação de operações inversas para 
+                "desfazer" as operações aplicadas à variável.
+            </p>
+
+            <p>
+                Um passo crucial no método básico é manter o equilíbrio da equação. Qualquer operação realizada em um lado da equação deve ser igualmente aplicada ao outro lado. 
+                Isso assegura que a igualdade original seja preservada durante todo o processo de resolução. A sequência típica de passos no método básico pode ser descrita da 
+                seguinte forma: Simplificação: Se necessário, simplifique ambos os lados da equação, combinando termos semelhantes e removendo parênteses através da aplicação de 
+                propriedades distributivas. Isolamento da variável: Use operações inversas para mover todos os termos contendo a variável para um lado da equação e todos os termos 
+                constantes para o outro lado. Isso pode envolver adicionar ou subtrair termos de ambos os lados. Resolução final: Divida ou multiplique ambos os lados da equação por 
+                um coeficiente que acompanha a variável, isolando-a completamente. O método básico é poderoso devido à sua simplicidade e aplicabilidade universal em equações lineares. 
+                Ele fornece uma base sólida para a compreensão de técnicas mais avançadas de resolução de equações e sistemas de equações. Além disso, o método básico ensina habilidades 
+                fundamentais de pensamento lógico e organização, essenciais para a matemática avançada e outras disciplinas científicas.
+            </p>
+            
+
+           <p>
+                Além da resolução direta de equações, o método básico também é utilizado para verificar soluções. Substituindo a variável encontrada de volta na equação original, é possível 
+                confirmar se a solução satisfaz a igualdade, garantindo a precisão do resultado. Em resumo, o método básico de resolução de equações é uma abordagem estruturada e acessível 
+                para encontrar valores desconhecidos. Envolvendo operações aritméticas elementares e a aplicação cuidadosa de princípios de equilíbrio, ele estabelece uma base essencial 
+                para a aprendizagem e aplicação da álgebra e outras áreas da matemática. 
+            </p>   
+
+            <h3>Exemplo:</h3>
+            <img src="../img/simplex.png" alt="">
+        </section>
+
+        <section id="simplex">
+            <h2>Algoritmo Simplex Tabular</h2>
+            <p>
+                O algoritmo simplex tabular é uma ferramenta fundamental na resolução de problemas de programação linear. Este método 
+                é usado para encontrar a solução ótima de problemas que envolvem a maximização ou minimização de uma função linear sujeita 
+                a um conjunto de restrições lineares. O método simplex tabular opera através da manipulação de uma tabela, conhecida como 
+                tableau simplex, que organiza todas as informações necessárias do problema de maneira sistemática. A estrutura do tableau 
+                permite a aplicação de operações aritméticas de forma organizada para iterativamente mover-se em direção à solução ótima.
+            </p>
+
+
+            <p>
+                O processo começa com a formulação do problema de programação linear em sua forma padrão, que envolve a expressão da função 
+                objetivo e das restrições como equações lineares. O tableau inicial é então montado, incluindo todas as variáveis, coeficientes 
+                das restrições e a função objetivo. A sequência de passos no algoritmo simplex tabular pode ser descrita da seguinte maneira:
+                Configuração inicial: Criação do tableau inicial a partir das equações de restrição e da função objetivo, incluindo variáveis de
+                folga para transformar as desigualdades em igualdades. Seleção da coluna pivot: Identificação da coluna de entrada, que é a variável
+                não básica que mais melhora o valor da função objetivo (para maximização, a que possui o maior coeficiente positivo na linha da função 
+                objetivo). Seleção da linha pivot: Determinação da linha de saída, que é a restrição que mais limita a introdução da variável de entrada. 
+                Isso é feito através da razão mínima entre os valores constantes e os coeficientes da coluna pivot (considerando apenas os valores positivos).
+                Operação de pivotamento: Realização de operações aritméticas para zerar os coeficientes na coluna pivot, exceto no elemento pivot, transformando a
+                variável de entrada em uma variável básica e a de saída em uma variável não básica. Atualização do tableau: Revisão e atualização do tableau com os 
+                novos coeficientes resultantes do pivotamento. Iteração: Repetição dos passos de seleção de colunas e linhas pivot e operação de pivotamento até que
+                não haja mais melhorias possíveis na função objetivo, indicando que a solução ótima foi alcançada.
+            </p>
+          
+            <p>
+                O algoritmo simplex tabular é valorizado por sua eficiência e capacidade de lidar com problemas de grande escala. Ele é particularmente útil em contextos industriais e empresariais onde otimização de recursos e maximização de lucros são essenciais.
+            
+                Uma das grandes vantagens do método simplex é a sua estrutura sistemática e iterativa, que garante que a cada passo a solução permanece factível e caminha em direção à otimização. Além disso, o tableau oferece uma visão clara e organizada do processo, facilitando a compreensão e a análise do progresso do algoritmo.
+                
+                Em resumo, o algoritmo simplex tabular é um método estruturado e eficiente para resolver problemas de programação linear. Ele utiliza um tableau para organizar e manipular as informações do problema de forma sistemática, permitindo a identificação e realização de operações que iterativamente conduzem à solução ótima. Este método é essencial em diversas aplicações práticas, destacando-se por sua robustez e precisão na otimização de funções lineares sujeitas a restrições.
+            </p>
+            
+            <h3>Exemplo:</h3>
+            <img src="../img/tabular.png" alt="">
+           
+        </section>
+
+        <section id="matrizes">
+            <h2>Matrizes</h2>
+            <p>
+                Matrizes são estruturas matemáticas fundamentais usadas para organizar e manipular dados de maneira eficiente. Elas consistem em arranjos retangulares de números, organizados em linhas e colunas. Cada elemento de uma matriz é identificado por dois índices: o índice da linha e o índice da coluna em que se encontra. As matrizes são amplamente utilizadas em várias áreas da matemática, ciência e engenharia, devido à sua capacidade de representar e resolver problemas complexos de forma sistemática.
+            </p>
+
+            <p>
+                As operações básicas com matrizes incluem adição, subtração, multiplicação e transposição:
+
+Adição e Subtração: Duas matrizes podem ser adicionadas ou subtraídas se, e somente se, tiverem as mesmas dimensões. A operação é realizada elemento a elemento.
+
+Multiplicação: A multiplicação de matrizes é uma operação mais complexa e requer que o número de colunas da primeira matriz seja igual ao número de linhas da segunda matriz. O produto de duas matrizes resulta em uma nova matriz, onde cada elemento é obtido através da soma dos produtos dos elementos correspondentes das linhas da primeira matriz e das colunas da segunda matriz.
+
+Transposição: A transposição de uma matriz envolve inverter suas linhas e colunas. Se a matriz original é A, sua transposta, denotada por A^T, é obtida trocando o elemento na posição (i, j) com o elemento na posição (j, i).
+            </p>
+
+            <p>
+                Além dessas operações básicas, as matrizes possuem propriedades e operações avançadas que são fundamentais em várias aplicações:
+
+Determinante: O determinante é um escalar associado a uma matriz quadrada que fornece informações importantes sobre a matriz, como se ela é invertível ou não. O cálculo do determinante envolve uma série de operações que resumem as características essenciais da matriz.
+
+Matriz Inversa: A matriz inversa é uma matriz que, quando multiplicada pela matriz original, resulta na matriz identidade. Nem todas as matrizes possuem inversas; uma matriz deve ser quadrada e ter um determinante diferente de zero para ser invertível.
+
+Matriz Identidade: A matriz identidade é uma matriz quadrada especial onde todos os elementos da diagonal principal são 1, e todos os outros elementos são 0. Ela atua como o elemento neutro na multiplicação de matrizes.
+
+Autovalores e Autovetores: Em álgebra linear, os autovalores e autovetores de uma matriz são fundamentais na análise de transformações lineares. Os autovalores são escalares que indicam quanto um autovetor é esticado ou comprimido durante a transformação associada à matriz.
+            </p>
+
+            <p>
+                Matrizes são ferramentas essenciais em diversos campos, como a álgebra linear, onde são usadas para resolver sistemas de equações lineares, transformar coordenadas e representar transformações lineares. Na física, elas são utilizadas para descrever rotações e transformações em mecânica quântica e relatividade. Em computação gráfica, as matrizes são fundamentais para realizar transformações de imagens e objetos em três dimensões. Na estatística, são usadas para organizar e analisar grandes conjuntos de dados.
+
+Em resumo, as matrizes são estruturas matemáticas versáteis e poderosas, que facilitam a organização e manipulação de dados. Elas permitem a realização de operações aritméticas e transformações complexas de maneira sistemática, sendo indispensáveis em diversas áreas do conhecimento e aplicações práticas.
+            </p>
+            <h3>Exemplo:</h3>
+            <img src="../img/Matriz.png" alt="">
+
+        </section>
+        
+        <section id="inversao-matrizes">
+            <h2>Inversão de Matrizes</h2>
+            <p>
+            A inversão de matrizes é um processo matemático para encontrar a matriz inversa de uma matriz quadrada. A matriz inversa, quando multiplicada pela matriz original, resulta na matriz identidade. Esse conceito é essencial em várias aplicações de álgebra linear, como a resolução de sistemas de equações lineares e transformações lineares.
+            </p>
+
+            <p>
+                Definição e Condições
+            Para uma matriz de ordem n×n, a matriz inversa é aquela que, ao ser multiplicada pela matriz original, resulta na matriz identidade da mesma ordem. Para que uma matriz tenha uma inversa, ela deve ser quadrada e ter um determinante diferente de zero. Uma matriz com determinante zero é chamada de matriz singular e não possui inversa.
+            </p>
+
+            <p>
+                Métodos de Cálculo da Inversa
+                Existem vários métodos para calcular a inversa de uma matriz:
+                
+                Método de Gauss-Jordan: Utiliza operações elementares para transformar a matriz original na matriz identidade e a matriz identidade na matriz inversa.
+                Cálculo pelo Determinante e Cofatores: Para matrizes pequenas, a inversa pode ser calculada usando a adjunta da matriz, onde a inversa é obtida dividindo a adjunta pelo determinante da matriz original.
+                Decomposição LU: Facilita a inversão de matrizes maiores, decompondo a matriz em produtos de matrizes triangulares inferior e superior, permitindo a solução de sistemas de equações lineares.
+                Propriedades da Matriz Inversa
+                Unicidade: Se a matriz inversa existe, ela é única.
+                Produto de Matrizes: A inversa do produto de duas matrizes é o produto das inversas na ordem inversa.
+                Transposta: A transposta da inversa de uma matriz é igual à inversa da transposta dessa matriz.
+            </p>
+
+            <p>
+                Aplicações
+                A inversão de matrizes é aplicada em diversas áreas, como a resolução de sistemas de equações lineares, transformações lineares em geometria e computação gráfica, e análise de redes em engenharia elétrica. Esses métodos são escolhidos com base nas características específicas do problema e nas dimensões da matriz envolvida.
+            </p>
+            
+           
+           <p>  
+            Em resumo, a inversão de matrizes é uma operação crucial em álgebra linear, permitindo a resolução de problemas complexos e a aplicação de transformações em várias disciplinas matemáticas e científicas.
+
+           </p>
+           <h3>Exemplo:</h3>
+            <img src="../img/matriz-1.png" alt="">
+        </section>
+
+        <section id="gauss-jordan">
+            <h2>Gauss-Jordan</h2>
+
+            <p>
+                O método de Gauss-Jordan é um algoritmo utilizado para resolver sistemas de equações lineares e para calcular a inversa de matrizes quadradas. Ele é uma extensão do método de eliminação de Gauss, incorporando passos adicionais para transformar a matriz original na forma escalonada reduzida por linhas, também conhecida como forma escalonada reduzida por Gauss.
+
+                Funcionamento do Método de Gauss-Jordan
+                O método de Gauss-Jordan opera através da aplicação de operações elementares em uma matriz aumentada, que combina a matriz original com a matriz identidade (ou outra matriz apropriada). Essas operações elementares incluem:
+            </p>
+
+            <p>
+                Troca de linhas: Permite reorganizar a ordem das equações no sistema.
+
+Multiplicação de uma linha por um escalar não nulo: Altera uma linha multiplicando todos os seus elementos por um mesmo número.
+
+Adição de um múltiplo de uma linha a outra linha: Combina duas linhas multiplicando uma delas por um escalar e adicionando-a à outra.
+
+O processo é executado em três etapas principais:
+
+Formação da Matriz Aumentada: Combina a matriz original 𝐴 A com a matriz identidade 𝐼 I (ou outra matriz apropriada) para formar a matriz aumentada [𝐴∣𝐼] [A∣I].
+
+Transformação para a Forma Escalonada Reduzida por Linhas: Aplica o método de eliminação de Gauss para transformar a parte esquerda da matriz aumentada em uma forma escalonada por linhas, onde todas as entradas abaixo e acima das pivôs são zeros.
+
+Transformação para a Forma Escalonada Reduzida por Gauss-Jordan: Continua o processo de eliminação até que todas as entradas acima e abaixo dos pivôs se tornem zero. O objetivo é obter uma matriz em que cada pivô seja igual a 1 e todos os outros elementos da coluna pivô sejam zero.
+            </p>
+
+            <p>
+                Aplicações do Método de Gauss-Jordan
+O método de Gauss-Jordan é amplamente utilizado em diversas aplicações práticas, incluindo:
+
+Resolução de Sistemas de Equações Lineares: Após a transformação da matriz aumentada para sua forma escalonada reduzida por Gauss-Jordan, as soluções do sistema podem ser lidas diretamente da matriz resultante.
+
+Cálculo da Inversa de Matrizes: Se a matriz original é transformada em uma matriz identidade durante o processo de Gauss-Jordan, a parte à direita da matriz aumentada será a inversa da matriz original.
+
+Análise de Transformações Lineares: Em geometria e transformações lineares, o método de Gauss-Jordan é usado para determinar as coordenadas transformadas ou para encontrar uma base ortonormal.
+
+Vantagens e Limitações
+Eficiência: O método de Gauss-Jordan é eficiente para matrizes pequenas e médias, especialmente quando combinado com computação numérica moderna.
+
+Complexidade: Para matrizes de grandes dimensões, o método de Gauss-Jordan pode se tornar computacionalmente intensivo e pode não ser a abordagem mais eficiente, sendo substituído por métodos iterativos ou outras técnicas de decomposição.
+
+Precisão: Quando implementado corretamente, o método de Gauss-Jordan oferece soluções precisas para sistemas de equações lineares e cálculo de inversas.
+            </p>
+
+            <p>
+Em resumo, o método de Gauss-Jordan é uma ferramenta poderosa e versátil em álgebra linear, amplamente utilizada para resolver sistemas de equações lineares e calcular inversas de matrizes. Ele emprega operações elementares para transformar uma matriz em sua forma escalonada reduzida por Gauss-Jordan, proporcionando soluções numéricas precisas e úteis em várias aplicações científicas e matemáticas.
+
+            </p>
+           
+
+            <h3>Exemplo:</h3>
+            <img src="../img/gauss.png" alt="">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Ana Cristina Ferreira da Silva e Raul Mascarenhas Souza</p>
+    </footer>
+
+    <script src="../JS/index.js"></script>
+</body>
+
+</html>
